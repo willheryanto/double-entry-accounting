@@ -12,6 +12,8 @@ export default interface AccountsTable {
 
   name: ColumnType<string, string, string>;
 
+  balance: ColumnType<string, string | undefined, string>;
+
   created: ColumnType<Date | null, Date | string | null, Date | string | null>;
 }
 

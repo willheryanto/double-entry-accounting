@@ -1,6 +1,7 @@
 CREATE TABLE accounts (
   id UUID DEFAULT uuid_generate_v4(),
   name VARCHAR(255) NOT NULL,
+  balance DECIMAL(20, 2) NOT NULL DEFAULT 0,
   PRIMARY KEY (id),
   created TIMESTAMP WITH TIME ZONE DEFAULT NOW()
 );
@@ -14,7 +15,7 @@ CREATE TABLE journals (
   amount DECIMAL(20, 2) NOT NULL,
   created TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
   PRIMARY KEY (id),
-  FOREIGN KEY (account_id) REFERENCES accounts(id)
+  FOREIGN KEY (account_id) REFERENCES accounts(id) ON DELETE CASCADE
 );
 
 CREATE INDEX idx_journals_account_id ON journals (account_id);

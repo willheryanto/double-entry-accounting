@@ -8,6 +8,8 @@ import { type ColumnType, type Selectable } from 'kysely';
 export default interface BalancesTable {
   account_id: ColumnType<AccountsId, never, never>;
 
+  name: ColumnType<string, never, never>;
+
   balance: ColumnType<string, never, never>;
 }
 
