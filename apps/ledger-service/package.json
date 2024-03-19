@@ -1,0 +1,25 @@
+{
+  "name": "ledger-service",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@pgtyped/cli": "^2.3.0",
+    "@types/pg": "^8.11.2",
+    "kanel": "^3.8.8",
+    "kanel-kysely": "^0.3.3",
+    "typescript": "^5.4.2"
+  },
+  "dependencies": {
+    "@pgtyped/runtime": "^2.3.0",
+    "@rmp135/sql-ts": "^2.0.0",
+    "kysely": "^0.27.3",
+    "pg": "^8.11.3"
+  }
+}
